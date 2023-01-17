@@ -15,7 +15,7 @@ import PriorityQueue from '@kartjim/priority-queue';
 
 or use CDN:
 ```js
-<script src="https://cdn.jsdelivr.net/npm/@kartjim/priority-queue@1.0.1/priorityqueue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@kartjim/priority-queue@1.0.2/priorityqueue.min.js"></script>
 ```
 
 ## API

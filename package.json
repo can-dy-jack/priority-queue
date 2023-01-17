@@ -1,6 +1,6 @@
 {
   "name": "@kartjim/priority-queue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Priority queue implementation in JavaScript",
   "main": "priorityqueue.js",
   "module": "index.js",
