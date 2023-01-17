@@ -12,7 +12,9 @@
     "test": "tape -r esm __test__/test.js",
     "bench": "node -r esm __test__/bench.js",
     "build": "rollup -c",
-    "watch": "rollup -cw"
+    "watch": "rollup -cw",
+    "pretest": "npm run lint",
+    "prepublishOnly": "npm test"
   },
   "files": [
     "index.js",
