@@ -9,7 +9,7 @@ export default class PriorityQueue {
     constructor(
         data = [],
         compare = function (a, b) {
-            return a === b ? 0 : a > b ? 1 : -1;
+            return a > b ? 1 : a < b ? -1 : 0;
         }
     ) {
         this.data = data;
@@ -51,12 +51,13 @@ export default class PriorityQueue {
         if (this.isEmpty()) return undefined;
 
         const top = this.data[0];
+        const bottom = this.data.pop();
+
         this.size--;
-        if (this.isEmpty()) {
-            return this.data.pop();
+        if (!this.isEmpty()) {
+            this.data[0] = bottom;
+            this._up(0);
         }
-        this.data[0] = this.data.pop();
-        this._up(0);
         return top;
     }
 
@@ -64,8 +65,8 @@ export default class PriorityQueue {
         let half = Math.floor(this.size / 2);
         let val = this.data[pos];
         while (pos < half) {
-            let more = pos * 2 + 1;
-            let right = more + 2;
+            let more =  (pos << 1) + 1;
+            let right = more + 1;
             if (right < this.size && this.compare(this.data[right], this.data[more]) < 0) {
                 more = right;
             }

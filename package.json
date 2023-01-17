@@ -8,13 +8,11 @@
   "unpkg": "priorityqueue.min.js",
   "types": "index.d.ts",
   "scripts": {
-    "lint": "eslint index.js",
-    "pretest": "npm run lint",
-    "test": "tape -r esm test.js",
-    "bench": "node -r esm bench.js",
+    "lint": "eslint index.js __test__/test.js __test__/bench.js",
+    "test": "tape -r esm __test__/test.js",
+    "bench": "node -r esm __test__/bench.js",
     "build": "rollup -c",
-    "watch": "rollup -cw",
-    "prepublishOnly": "npm test"
+    "watch": "rollup -cw"
   },
   "files": [
     "index.js",
