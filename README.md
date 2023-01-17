@@ -18,6 +18,31 @@ or use CDN:
 <script src="https://cdn.jsdelivr.net/npm/@kartjim/priority-queue@1.0.2/priorityqueue.min.js"></script>
 ```
 
+## use
+```js
+const data = [];
+for (let i = 0; i < 50; i++) {
+    data.push(~~(50 * Math.random()));
+}
+
+const sorted = data.slice().sort((a, b) => a - b);
+
+const heap = new PriorityQueue();
+for (let i = 0; i < data.length; i++) {
+    heap.push(data[i]);
+}
+
+heap.peek() === sorted[0] // true
+
+let ans = [];
+while (!heap.isEmpty()) {
+    ans.push(heap.pop());
+}
+
+ans == sorted // deeply equal
+```
+
+
 ## API
 - constructor
   - `constructor(data?: T[],compare?: (a: T, b: T) => number);`
