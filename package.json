@@ -1,0 +1,49 @@
+{
+  "name": "@kartjim/priority-queue",
+  "version": "1.0.1",
+  "description": "Priority queue implementation in JavaScript",
+  "main": "priorityqueue.js",
+  "module": "index.js",
+  "jsdelivr": "priorityqueue.min.js",
+  "unpkg": "priorityqueue.min.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "lint": "eslint index.js",
+    "pretest": "npm run lint",
+    "test": "tape -r esm test.js",
+    "bench": "node -r esm bench.js",
+    "build": "rollup -c",
+    "watch": "rollup -cw",
+    "prepublishOnly": "npm test"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "priorityqueue.js",
+    "priorityqueue.min.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/can-dy-jack/priority-queue.git"
+  },
+  "keywords": [
+    "priority-queue",
+    "JavaScript",
+    "js",
+    "data-structure"
+  ],
+  "author": "can-dy-jack",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/can-dy-jack/priority-queue/issues"
+  },
+  "homepage": "https://github.com/can-dy-jack/priority-queue#readme",
+  "devDependencies": {
+    "@rollup/plugin-buble": "^1.0.1",
+    "@rollup/plugin-terser": "^0.3.0",
+    "eslint": "^8.32.0",
+    "esm": "^3.2.25",
+    "rollup": "^3.10.0",
+    "tape": "^5.6.3"
+  }
+}
