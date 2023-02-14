@@ -1,4 +1,4 @@
-# priority-queue
+# priority-queue ![npm version](https://img.shields.io/npm/v/@kartjim/priority-queue?style=flat-square)
 > Priority queue(优先队列) implementation in JavaScript
 
 > 学习项目，参考自：[mourner/tinyqueue](https://github.com/mourner/tinyqueue)
