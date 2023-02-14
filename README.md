@@ -1,4 +1,4 @@
-# priority-queue ![npm version](https://img.shields.io/npm/v/@kartjim/priority-queue?style=flat-square)
+# priority-queue ![npm version](https://img.shields.io/npm/v/@kartjim/priority-queue?style=flat-square) ![Node.js CI](https://github.com/can-dy-jack/priority-queue/actions/workflows/test.yml/badge.svg)
 > Priority queue(优先队列) implementation in JavaScript
 
 ## install
